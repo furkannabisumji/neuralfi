@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 // const { heroui } = require("@heroui/react");
 import { heroui } from "@heroui/react";
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 module.exports = {
   darkMode: ["class"],
@@ -66,5 +67,15 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), heroui()],
+  plugins: [require("tailwindcss-animate"), heroui(), addVariablesForColors],
 };
+
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
+
+  addBase({
+    ":root": newVars,
+  });
+}
