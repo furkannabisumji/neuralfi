@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useCallback, useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Logo, LogoIcon } from "../layout";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
-import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
+import { BugAntIcon } from "@heroicons/react/24/outline";
+import { FaucetButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
 type HeaderMenuLink = {
@@ -59,13 +57,6 @@ export const HeaderMenuLinks = () => {
  * Site header
  */
 export const PortfolioHeader = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const burgerMenuRef = useRef<HTMLDivElement>(null);
-  useOutsideClick(
-    burgerMenuRef,
-    useCallback(() => setIsDrawerOpen(false), []),
-  );
-
   return (
     <div className="  bg-base-100 h-[7%]  flex items-center flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-2 sm:px-4 ">
       <Link href="#" className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20">
@@ -73,7 +64,6 @@ export const PortfolioHeader = () => {
         <p className="text-base dark:text-white">Neuralfi</p>
       </Link>
       <ConnectButton />
-      {/* <FaucetButton /> */}
     </div>
   );
 };
