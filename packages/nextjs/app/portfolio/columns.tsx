@@ -59,7 +59,7 @@ export const columns: ColumnDef<Transaction>[] = [
     accessorKey: "status",
     header: () => <div className="text-center">Status</div>,
     cell: ({ row }) => {
-      const status = row.getValue("status");
+      const status: string = row.getValue("status");
 
       const statusColors = {
         pending: "text-yellow-500",

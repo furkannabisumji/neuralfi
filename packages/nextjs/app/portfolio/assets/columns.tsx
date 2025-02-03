@@ -88,7 +88,7 @@ export const columns: ColumnDef<PortfolioMetrics>[] = [
     accessorKey: "priceChange24h",
     header: () => <div className="text-center">Change (24h)</div>,
     cell: ({ row }) => {
-      const priceChange = row.getValue("priceChange24h");
+      const priceChange: number = row.getValue("priceChange24h");
 
       // Determine the color based on the value of priceChange24h
       let colorClass = "";

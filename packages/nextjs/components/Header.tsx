@@ -59,7 +59,7 @@ export const HeaderMenuLinks = () => {
  */
 export const Header = () => {
   return (
-    <div className="fixed top-0 w-full bg-background h-[70px] flex items-center flex-shrink-0 justify-between z-50 shadow-md shadow-secondary px-2 sm:px-4">
+    <div className="fixed top-0  w-full bg-background h-[70px] flex items-center flex-shrink-0 justify-between z-50 shadow-md shadow-secondary px-2 sm:px-4">
       <Link href="/" className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20">
         <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
         <p className="text-xl dark:text-white">Neuralfi</p>

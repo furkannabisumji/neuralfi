@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <Link href="/portfolio">
           <Button
             borderRadius="1.75rem"
-            className="bg-white z-50 dark:bg-neutral-900 cursor-pointer text-black dark:text-white border-neutral-200 dark:border-slate-800"
+            className="bg-white z-40 dark:bg-neutral-900 cursor-pointer text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
             Get started
           </Button>
