@@ -17,7 +17,7 @@ const Home: NextPage = () => {
     <div className=" overflow-y-auto">
       <Header />
       <div className="flex items-center flex-col flex-1 pt-[90px] ">
-        <div className="px-5 flex flex-col justify-center gap-4 min-h-[200px] ">
+        <div className="px-5 flex flex-col justify-center gap-4 min-h-[200px]">
           <div className="flex flex-col gap-4 items-center text-center">
             <h1 className="text-center font-bold text-xl md:text-4xl">Your AI-Powered Portfolio Manager</h1>
             <p className="text-sm md:text-md">
@@ -25,12 +25,14 @@ const Home: NextPage = () => {
             </p>
           </div>
         </div>
-        <Button
-          borderRadius="1.75rem"
-          className="bg-white dark:bg-neutral-900 cursor-pointer text-black dark:text-white border-neutral-200 dark:border-slate-800"
-        >
-          Get started
-        </Button>
+        <Link href="/portfolio">
+          <Button
+            borderRadius="1.75rem"
+            className="bg-white z-50 dark:bg-neutral-900 cursor-pointer text-black dark:text-white border-neutral-200 dark:border-slate-800"
+          >
+            Get started
+          </Button>
+        </Link>
 
         <HeroScrollImage />
       </div>
