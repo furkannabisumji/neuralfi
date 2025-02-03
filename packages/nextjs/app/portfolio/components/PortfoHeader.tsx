@@ -59,7 +59,7 @@ export const HeaderMenuLinks = () => {
 export const PortfolioHeader = () => {
   return (
     <div className="  bg-base-100 h-[7%]  flex items-center flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-2 sm:px-4 ">
-      <Link href="#" className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20">
+      <Link href="/" className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20">
         <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
         <p className="text-base dark:text-white">Neuralfi</p>
       </Link>
