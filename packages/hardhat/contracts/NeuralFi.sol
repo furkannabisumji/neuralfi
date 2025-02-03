@@ -33,9 +33,7 @@ contract NeuralFi is Ownable {
     event Invested(address indexed user, address token, uint256 amount, uint256 timestamp);
     event Withdrawn(address indexed user, address token, uint256 amount, uint256 timestamp);
 
-    constructor(address _aggregator) Ownable(msg.sender) {
-        aggregator = YieldAggregator(_aggregator);
-    }
+    constructor() Ownable(msg.sender) {}
 
     modifier onlyYield() {
         require(yield == msg.sender, "Unauthorised");
@@ -44,6 +42,7 @@ contract NeuralFi is Ownable {
     function setYield(address _yield) external onlyOwner {
         require(yield == address(0), "Already set");
         yield = _yield;
+        aggregator = YieldAggregator(_yield);
     }
 
     function setToken(address _token, bool _allow) external onlyOwner {
