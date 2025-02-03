@@ -27,17 +27,17 @@ export default function PortfolioLayout({ children }: { children: React.ReactNod
     },
     {
       label: "Assets",
-      href: "/assets",
+      href: "/portfolio/assets",
       icon: <IconWallet className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />,
     },
     {
       label: "Transactions",
-      href: "/transactions",
+      href: "/portfolio/transactions",
       icon: <IconTransfer className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />,
     },
     {
       label: "Settings",
-      href: "/settings",
+      href: "/portfolio/settings",
       icon: <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />,
     },
   ];

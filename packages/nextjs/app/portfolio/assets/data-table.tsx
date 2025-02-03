@@ -54,17 +54,17 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
   });
 
   return (
-    <div className=" flex flex-col justify-center h-full bg-background px-3">
-      <div className="flex items-center py-4 h-[10%] ">
+    <div className=" flex flex-col justify-center max-h-[100vh] bg-background px-3">
+      {/* <div className="flex items-center py-4 h-[10%] ">
         <Input
-          placeholder="Filter hash..."
+          placeholder="Filter token..."
           value={(table.getColumn("hash")?.getFilterValue() as string) ?? ""}
           onChange={event => table.getColumn("hash")?.setFilterValue(event.target.value)}
           className="max-w-sm"
         />
-      </div>
+      </div> */}
 
-      <div className="  h-[80%]">
+      <div className="  h-[90%]">
         <ScrollArea className="h-full flex flex-col ">
           <Table className=" ">
             <TableHeader>
