@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { Logo, LogoIcon } from "./components/LogoController";
 import { PortfolioHeader } from "./components/PortfoHeader";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
@@ -61,23 +60,6 @@ export default function PortfolioLayout({ children }: { children: React.ReactNod
                 ))}
               </div>
             </div>
-            {/* <div>
-              <SidebarLink
-                link={{
-                  label: "Manu Arora",
-                  href: "#",
-                  icon: (
-                    <Image
-                      src="https://assets.aceternity.com/manu.png"
-                      className="h-7 w-7 flex-shrink-0 rounded-full"
-                      width={50}
-                      height={50}
-                      alt="Avatar"
-                    />
-                  ),
-                }}
-              />
-            </div> */}
             <ModeToggle />
           </SidebarBody>
         </Sidebar>
@@ -86,24 +68,3 @@ export default function PortfolioLayout({ children }: { children: React.ReactNod
     </div>
   );
 }
-const Logo = () => {
-  return (
-    <Link href="#" className="font-normal flex sm:hidden  space-x-2 items-center text-sm text-black py-1 relative z-20">
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
-      <motion.span
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="font-medium  text-black dark:text-white whitespace-pre"
-      >
-        Neuralfi
-      </motion.span>
-    </Link>
-  );
-};
-const LogoIcon = () => {
-  return (
-    <Link href="#" className="font-normal flex sm:hidden space-x-2 items-center text-sm text-black py-1 relative z-20">
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
-    </Link>
-  );
-};
