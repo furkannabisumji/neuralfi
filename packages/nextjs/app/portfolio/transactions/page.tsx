@@ -1,4 +1,5 @@
 import { Transaction, columns } from "../columns";
+import { Manager } from "../components/Manager";
 import { DataTable } from "../data-table";
 import { TransactionAnalysis } from "./components/TransactionAnalysis";
 import { NextPage } from "next";
@@ -105,8 +106,12 @@ const Portfolio: NextPage = async () => {
   return (
     <div className="flex h-full w-full overflow-y-auto ">
       <div className="p-2 md:p-10 h-auto overflow-y-auto  rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-20 flex-1 w-full ">
-        <div className="">
-          <h3 className="text-2xl font-bold leading-relaxed">Transactions</h3>
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center justify-between ">
+            <h3 className="text-2xl font-bold leading-relaxed">Transactions</h3>
+
+            <Manager />
+          </div>
           <TransactionAnalysis />
         </div>
 

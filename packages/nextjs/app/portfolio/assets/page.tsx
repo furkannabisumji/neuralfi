@@ -1,3 +1,4 @@
+import { Manager } from "../components/Manager";
 import { PortfolioMetrics, columns } from "./columns";
 // import { AssetChart } from "./components/AssetChart";
 import AssetChartCarousel from "./components/AssetChartCarousel";
@@ -246,7 +247,11 @@ const Assets: NextPage = async () => {
     <div className="flex h-full w-full overflow-y-auto ">
       <div className="p-2 md:p-10 h-auto overflow-y-auto  rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-20 flex-1 w-full ">
         <div className="flex flex-col gap-3">
-          <h3 className="text-2xl font-bold leading-relaxed">Assets</h3>
+          <div className="flex items-center justify-between ">
+            <h3 className="text-2xl font-bold leading-relaxed">Assets</h3>
+
+            <Manager />
+          </div>
           <div className="bg-neutral-100 dark:bg-neutral-800 py-3 px-2">
             <AssetChartCarousel tokens={tokens} chartColors={chartColors} />
           </div>
