@@ -1,4 +1,5 @@
 import { Transaction, columns } from "./columns";
+import { Manager } from "./components/Manager";
 import { DataTable } from "./data-table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { IconArrowBounce, IconChartLine, IconChartPie, IconCoins, IconWallet } from "@tabler/icons-react";
@@ -105,38 +106,45 @@ const Portfolio: NextPage = async () => {
 
   return (
     <div className="flex h-full w-full overflow-y-auto ">
-      <div className="p-2 md:p-10 h-auto overflow-y-auto  rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-20 flex-1 w-full ">
-        <div className=" gap-2 grid grid-cols-1 md:grid-cols-3">
-          <Card className="h-40 flex flex-col justify-center gap-6">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-primary">Total Value</CardTitle>
-              <IconCoins className="text-green-700  h-5 w-5 flex-shrink-0" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-4xl font-bold">${10}</div>
-              <p className="text-sm text-muted-foreground">Accumulated transactions.</p>
-            </CardContent>
-          </Card>
-          <Card className="h-40 flex flex-col justify-center gap-6">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-primary">Total Asset</CardTitle>
-              <IconWallet className="text-orange-700  h-5 w-5 flex-shrink-0" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-4xl font-bold">${10}</div>
-              <p className="text-sm text-muted-foreground">Accumulated transactions.</p>
-            </CardContent>
-          </Card>
-          <Card className="h-40 flex flex-col justify-center gap-6">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-primary">24h Change</CardTitle>
-              <IconChartLine className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-4xl font-bold">${10}</div>
-              <p className="text-sm text-muted-foreground">Accumulated transactions.</p>
-            </CardContent>
-          </Card>
+      <div className="p-2 md:p-10 h-auto overflow-y-auto  rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-14 flex-1 w-full ">
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center justify-between ">
+            <h3 className="text-2xl font-bold leading-relaxed">Portfolio</h3>
+
+            <Manager />
+          </div>
+          <div className=" gap-2 grid grid-cols-1 md:grid-cols-3">
+            <Card className="h-40 flex flex-col justify-center gap-6">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium text-primary">Total Value</CardTitle>
+                <IconCoins className="text-green-700  h-5 w-5 flex-shrink-0" />
+              </CardHeader>
+              <CardContent>
+                <div className="text-4xl font-bold">${10}</div>
+                <p className="text-sm text-muted-foreground">Accumulated transactions.</p>
+              </CardContent>
+            </Card>
+            <Card className="h-40 flex flex-col justify-center gap-6">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium text-primary">Total Asset</CardTitle>
+                <IconWallet className="text-orange-700  h-5 w-5 flex-shrink-0" />
+              </CardHeader>
+              <CardContent>
+                <div className="text-4xl font-bold">${10}</div>
+                <p className="text-sm text-muted-foreground">Accumulated transactions.</p>
+              </CardContent>
+            </Card>
+            <Card className="h-40 flex flex-col justify-center gap-6">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium text-primary">24h Change</CardTitle>
+                <IconChartLine className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+              </CardHeader>
+              <CardContent>
+                <div className="text-4xl font-bold">${10}</div>
+                <p className="text-sm text-muted-foreground">Accumulated transactions.</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
         <DataTable columns={columns} data={data} />
