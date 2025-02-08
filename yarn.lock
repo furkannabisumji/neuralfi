@@ -969,13 +969,6 @@ hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
-"hello-world-avs@file:D:\\work\\events\\ethagentic\\neuralfi\\packages\\hello-world-avs":
-  version "1.0.0"
-  resolved "file:packages/hello-world-avs"
-  dependencies:
-    dotenv "^10.0.0"
-    ethers "^6.13.2"
-
 html-escaper@^2.0.0:
   version "2.0.2"
 
@@ -1524,6 +1517,13 @@ ms@^2.1.3:
 natural-compare@^1.4.0:
   version "1.4.0"
 
+"neuralfi-avs@file:D:\\work\\events\\ethagentic\\neuralfi\\packages\\avs":
+  version "1.0.0"
+  resolved "file:packages/avs"
+  dependencies:
+    dotenv "^10.0.0"
+    ethers "^6.13.2"
+
 node-int64@^0.4.0:
   version "0.4.0"
 
@@ -1544,7 +1544,7 @@ npm-run-path@^5.1.0:
     path-key "^4.0.0"
 
 object-inspect@^1.12.3:
-  version "1.13.3"
+  version "1.13.4"
 
 once@^1.3.0:
   version "1.4.0"
